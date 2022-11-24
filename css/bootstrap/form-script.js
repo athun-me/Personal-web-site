@@ -4,6 +4,28 @@ const subject = document.getElementById('subject');
 const message = document.getElementById('message');
 const email = document.getElementById('email');
 
+form.addEventListener('submit', (event)=>{
+    
+    validateForm();
+    console.log(isFormValid());
+    if(isFormValid()==true){
+        form.submit();
+     }else {
+         event.preventDefault();
+     }
+
+});
+
+function isFormValid(){
+    const inputContainers = form.querySelectorAll('.x');
+    let result = true;
+    inputContainers.forEach((container)=>{
+        if(container.classList.contains('error')){
+            result = false;
+        }
+    });
+    return result;
+}
 
 //Show input error messages
 function showError(input, message) {

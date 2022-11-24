@@ -581,7 +581,9 @@
 			<div class="row no-gutters block-9">
 
 				<div class="col-md-6 order-md-last d-flex p-5">
-					<form id="form" class="form">
+					<form
+						action="https://script.google.com/macros/s/AKfycbxCSk7QstA75Jo-jtnJQ0BsKynKqxdylKO-h9_1EXi-2gx37JGCFtgTMCkmgSSx5WtC/exec"
+						method="post" id="form" class="form">
 						<h2 style="font-weight: bold;">Connect with me</h2>
 						<div class="x">
 							<label for="username">Username</label>
@@ -606,8 +608,7 @@
 							<small style="color: red;">Error Message</small>
 						</div>
 
-
-						<button>Submit</button>
+						<button type="submit">Submit</button>
 					</form>
 				</div>
 
@@ -633,12 +634,24 @@
 							challenges that are meaningful to me and I've never stopped engaging my passion to help
 							others and solve problems</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li style="text-align: center;" class="ftco-animate"><a href="#"><i style="font-size: 50px;"
-										class="fa-brands fa-facebook"></i></a></li>
-							<li style="text-align: center;" class="ftco-animate"><a href="#"><i style="font-size: 50px;"
-										class="fa-brands fa-whatsapp"></i></a></li>
-							<li style="text-align: center;" class="ftco-animate"><a href="#"><i style="font-size: 50px;"
-										class="fa-brands fa-instagram"></i></a></li>
+							<li style="text-align: center;" class="ftco-animate"><a
+								href="https://github.com/Athunlal"><i style="font-size: 50px;"
+									class="fa-brands fa-github"></i></a>
+						    </li>
+							<li style="text-align: center;" class="ftco-animate"><a href="#contact-section"><i
+										style="font-size: 50px;" class="fa-brands fa-whatsapp"></i></a>
+							</li>
+							<li style="text-align: center;" class="ftco-animate"><a
+									href="https://www.instagram.com/athun._/"><i style="font-size: 50px;"
+										class="fa-brands fa-instagram"></i></a>
+							</li>
+							<li style="text-align: center;" class="ftco-animate"><a
+									href="https://www.linkedin.com/in/athun-lal-0103631ba/"><i style="font-size: 50px;"
+										class="fa-brands fa-linkedin"></i></a>
+							</li>
+
+							
+							
 						</ul>
 					</div>
 				</div>
@@ -679,8 +692,6 @@
 						<h2 class="ftco-heading-2">Have a Questions?</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><i class="fa-solid fa-arrow-right mr-2"></i><span class="text">203 Fake St.
-										Mountain View, San Francisco, California, USA</span></li>
 								<li><a href="#"><i class="fa-solid fa-arrow-right mr-2"></i><span class="text">+91
 											8086671618</span></a></li>
 								<li><a href="#"><i class="fa-solid fa-arrow-right mr-2"></i><span
@@ -693,6 +704,26 @@
 
 		</div>
 	</footer>
+
+	<script>
+		$("#form").submit((e) => {
+			e.preventDefault()
+			$.ajax({
+				url: "",
+				data: $("#form").serialize(),
+				method: "post",
+				success: function (response) {
+					alert("Form submitted successfully")
+					window.location.reload()
+					//window.location.href="https://google.com"
+				},
+				error: function (err) {
+					alert("Something Error")
+
+				}
+			})
+		})
+	</script>
 
 	<script src="css/bootstrap/form-script.js"></script>
 	<script src="js/jquery.min.js"></script>
