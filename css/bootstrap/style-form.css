@@ -18,7 +18,7 @@ h2{
     margin: 0 0 20px;
 }
 
-.form{
+.form1{
     padding: 30px 40px;
 }
 
@@ -66,10 +66,8 @@ h2{
     visibility: hidden;
 }
 
-.x.error small{
-    visibility: visible;
-}
-.form button {
+
+.form1 button {
     cursor: pointer;
     background-color: #3498db;
     border: 2px solid #3498db;
@@ -80,4 +78,15 @@ h2{
     font-size: 16px;
     margin-top:20px;
     width:100%;
+}
+.x.succes input{
+    border-color: #2ecc71;
+}
+
+.x.err input{
+    border-color: #e74c3c;
+}
+.x.err small{
+    visibility: visible;
+    color: red;
 }
